@@ -1,9 +1,9 @@
-import { notes } from '@services/service1/functions/notes';
+import { notes } from '@packages/notes';
 import { APIGatewayProxyResult } from 'aws-lambda';
 
-export async function handler(): Promise<APIGatewayProxyResult> {
+export const list = async function handler(): Promise<APIGatewayProxyResult> {
   return {
     statusCode: 200,
     body: JSON.stringify(notes, null, '  '),
   };
-}
+};

@@ -1,9 +1,9 @@
-import logger from '@reusable-package-1/utils/logger';
+import logger from '@packages/abstraction/utils/logger';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import fs from 'fs';
 import jwt from 'jsonwebtoken';
 
-export const handler = async function (
+export const signup = async function (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> {
   let signUpData: string;

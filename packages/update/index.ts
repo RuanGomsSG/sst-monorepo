@@ -1,9 +1,9 @@
-import logger from '@reusable-package-1/utils/logger';
+import logger from '@packages/abstraction/utils/logger';
 import { notes } from '@services/service1/functions/notes';
 import { APIGatewayProxyHandlerV2 } from 'aws-lambda';
 import jwt from 'jsonwebtoken';
 
-export const handler: APIGatewayProxyHandlerV2 = async function main(event) {
+export const update: APIGatewayProxyHandlerV2 = async function main(event) {
   const token: string = event.headers['authorization']?.split(' ')[1] || '';
 
   if (jwt.verify(token, 'secret')) {

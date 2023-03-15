@@ -1,4 +1,4 @@
-import { Note } from '@reusable-package-1/types/notes';
+import { Note } from '@packages/abstraction/types/note';
 export const notes: Record<string, Note> = {
   id1: {
     noteId: 'id1',

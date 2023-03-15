@@ -1,8 +1,8 @@
-import logger from '@reusable-package-1/utils/logger';
-import { notes } from '@services/service1/functions/notes';
+import logger from '@packages/abstraction/utils/logger';
+import { notes } from '@packages/notes';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
-export const handler = async function main(
+export const get = async function main(
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> {
   const noteInfo = notes[event.pathParameters?.id!];
